@@ -35,18 +35,20 @@ class HashTable:
 
         prev.next = HashValue(value)
 
-    def getId(self, value):
+    def get(self, value):
         index = self.hash(value)
 
         hv = self.__list[index]
 
+        internalPosition = 0
         while hv is not None and hv.value != value:
             hv = hv.next
+            internalPosition += 1
 
         if hv is None:
             return None
         else:
-            return hv.value
+            return (index, internalPosition)
 
     def __str__(self):
         return str(self.__list)
