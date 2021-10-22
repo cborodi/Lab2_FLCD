@@ -1,0 +1,25 @@
+begin
+
+def_int a, b, c;
+
+in >> a >> b >> c;
+
+if((a > b) and (a > c))
+{
+	out << a;
+	end
+}
+
+if((b > a) and (b > c))
+{
+	out << b;
+	end
+}
+
+if((c > a) and (c > b))
+{
+	out << c;
+	end
+}
+
+end
